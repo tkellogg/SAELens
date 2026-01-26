@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v6.30.2 (2026-01-26)
+
+### Chore
+
+* chore: Use correct reference link in temporal_sae.py (#626) ([`1d6f6f0`](https://github.com/decoderesearch/SAELens/commit/1d6f6f098833400287ca99d228dc799f0cc65a9d))
+
+### Fix
+
+* fix: raise error when context_size &gt; training_tokens (#627)
+
+Fixes #581 ([`64ab87b`](https://github.com/decoderesearch/SAELens/commit/64ab87bed0b1c14a90d779f114d88937c7f2f3d4))
+
+* fix: add leave=False to nested tqdm progress bars for Jupyter (#628)
+
+Fixes #495
+
+Nested progress bars without leave=False cause newlines on every
+update in Jupyter notebooks. This adds the parameter to progress
+bars that run inside other loops:
+- activation_scaler.py: norm estimation during training
+- evals.py: reconstruction and sparsity batches during eval ([`da5420e`](https://github.com/decoderesearch/SAELens/commit/da5420e970103eb4752dad1a0b99c3becfa6245f))
+
 ## v6.30.1 (2026-01-20)
 
 ### Fix
