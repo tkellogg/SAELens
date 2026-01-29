@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v6.31.0 (2026-01-29)
+
+### Feature
+
+* feat: Add log_weights_to_wandb option to logging config (#629) ([`25caed5`](https://github.com/decoderesearch/SAELens/commit/25caed582d5e40aa27c2fae722373dabe18eae45))
+
 ## v6.30.2 (2026-01-26)
 
 ### Chore
