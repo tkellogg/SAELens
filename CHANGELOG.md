@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v6.32.1 (2026-01-31)
+
+### Fix
+
+* fix: do not apply hook_z reshaping to gemma scope 2 (#632) ([`1dc44a9`](https://github.com/decoderesearch/SAELens/commit/1dc44a9a43572f20b7275319c86c88f4649083fd))
+
 ## v6.32.0 (2026-01-30)
 
 ### Feature
