@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v6.34.1 (2026-02-02)
+
+### Fix
+
+* fix: avoid deprecation warnings in normal usage of HookedSAETransformer (#636) ([`bfad65e`](https://github.com/decoderesearch/SAELens/commit/bfad65ea4d1391ef333e3215db00109179388ddb))
+
 ## v6.34.0 (2026-02-01)
 
 ### Feature
