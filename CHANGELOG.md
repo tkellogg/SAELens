@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v6.36.0 (2026-02-07)
+
+### Chore
+
+* chore: update tests for `transformers` v5.0.0 compatibility (#639)
+
+* pre transformers v5 upgrade minor test fix
+
+* Add support for transformers v5.0.0
+
+- Add hf_to_tokens() test helper and update tests in test_activations_store.py to use HookedTransformer.to_tokens() for v4/v5 BOS compatibility
+- Fix pyright/type issue by annotating tokenizer.special_tokens_map.values() in util.py and corresponding comparison test file
+- update pyproject.toml to use transformers v5.0.0 and upstream transformer_lens branch that supports it (will be replaced with the appropriate released transformer-lens version when available)
+
+* fix for huggingface_hub&gt;=1.0 API change with RepositoryNotFoundError
+
+* apply some review suggestions, fix annotation typo, adjust temporary pyproject.toml changes
+
+* explicitly comment out standard transformer-lens and transformer deps to avoid temporary conflicts until upstream PR is merged
+
+* prepare pyproject.toml to use v4 transformers again now that we have vetted v5 in CI ([`dae4706`](https://github.com/decoderesearch/SAELens/commit/dae4706c7719c915a047ad1b2110c35aec4758ae))
+
+* chore: Add save_inference_move to doc (#625) ([`3f90c7b`](https://github.com/decoderesearch/SAELens/commit/3f90c7b6d7eeed81db4e3444a4ea0f0c677e1650))
+
+### Feature
+
+* feat: add option to scale child magnitudes based on parent magnitudes (#641) ([`78b92fc`](https://github.com/decoderesearch/SAELens/commit/78b92fc03d9866b4c9acceb9674d29cd277a3cd2))
+
 ## v6.35.0 (2026-02-04)
 
 ### Feature
