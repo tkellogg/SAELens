@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v6.36.1 (2026-02-09)
+
+### Fix
+
+* fix: reset random state after synthetic model init (#642) ([`cbf423c`](https://github.com/decoderesearch/SAELens/commit/cbf423ce4f36d8f80aa7fbdd8229449bb27fb365))
+
 ## v6.36.0 (2026-02-07)
 
 ### Chore
