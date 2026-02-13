@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v6.37.0 (2026-02-13)
+
+### Feature
+
+* feat: Matryoshka auxiliary loss (#643)
+
+* adding matryoshka topk aux loss
+
+* adding tests
+
+* changes from CR
+
+* don&#39;t add b_dec during mat topk recons
+
+* fixing rescaling issues
+
+* changes from CR
+
+* removing unused method ([`f5c5110`](https://github.com/decoderesearch/SAELens/commit/f5c511067beef6537d4afde50e0cd8796fb33e32))
+
 ## v6.36.2 (2026-02-11)
 
 ### Fix
