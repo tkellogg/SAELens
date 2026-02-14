@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v6.37.1 (2026-02-14)
+
+### Fix
+
+* fix: fold scaling factor when loading Llama Scope SAEs (#645) ([`696d08b`](https://github.com/decoderesearch/SAELens/commit/696d08bde53b4e15f0c2c7913c5cf299a4a94d4b))
+
 ## v6.37.0 (2026-02-13)
 
 ### Feature
