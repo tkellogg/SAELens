@@ -1,5 +1,49 @@
 # CHANGELOG
 
+## v6.37.2 (2026-02-19)
+
+### Chore
+
+* chore: fixing broken link in docs (#649) ([`bcb817e`](https://github.com/decoderesearch/SAELens/commit/bcb817e4ec57875df57e68bc8a6f36485799d0c3))
+
+* chore: updating docs for synthsaebench (#646)
+
+* updating docs for synthsaebench
+
+* Update docs/synthsaebench.md
+
+Co-authored-by: Copilot &lt;175728472+Copilot@users.noreply.github.com&gt;
+
+* Update docs/synthetic_data.md
+
+Co-authored-by: Copilot &lt;175728472+Copilot@users.noreply.github.com&gt;
+
+* Update docs/synthetic_data.md
+
+Co-authored-by: Copilot &lt;175728472+Copilot@users.noreply.github.com&gt;
+
+* changes from CR
+
+* adding synth sae bench tutorial notebook
+
+* updating tutorial notebook
+
+* changes from CR
+
+* changes from CR
+
+* adding link to paper
+
+* changes from CR
+
+---------
+
+Co-authored-by: Copilot &lt;175728472+Copilot@users.noreply.github.com&gt; ([`d44e201`](https://github.com/decoderesearch/SAELens/commit/d44e201241a85b7263341c39fe013229804b2426))
+
+### Fix
+
+* fix: relax transformers dep to allow v5 (#650) ([`610d6e5`](https://github.com/decoderesearch/SAELens/commit/610d6e5c01686abdfc41e432728c4bf36c9409c1))
+
 ## v6.37.1 (2026-02-14)
 
 ### Fix
