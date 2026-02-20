@@ -106,7 +106,7 @@ class HookedProxyLM(HookedRootModule):
         stop_at_layer: int | None = None,
         _names_filter: list[str] | None = None,
         **kwargs: Any,
-    ) -> Output | Loss:
+    ) -> Output | Loss | None:
         # This is just what's needed for evals, not everything that HookedTransformer has
         if return_type not in (
             "both",
