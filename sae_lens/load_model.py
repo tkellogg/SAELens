@@ -141,6 +141,11 @@ class HookedProxyLM(HookedRootModule):
         if return_type == "logits":
             return logits
 
+        if logits is None:
+            raise ValueError(
+                "return_type='both' requires logits, but the model returned logits=None."
+            )
+
         if tokens.device != logits.device:
             tokens = tokens.to(logits.device)
         loss = lm_cross_entropy_loss(logits, tokens, per_token=loss_per_token)
@@ -191,14 +196,16 @@ class HookedProxyLM(HookedRootModule):
         return tokens  # type: ignore
 
 
-def _extract_logits_from_output(output: Any) -> torch.Tensor:
+def _extract_logits_from_output(output: Any) -> torch.Tensor | None:
     if isinstance(output, torch.Tensor):
         return output
     if isinstance(output, tuple) and isinstance(output[0], torch.Tensor):
         return output[0]
     if isinstance(output, dict) and "logits" in output:
         return output["logits"]
-    raise ValueError(f"Unknown output type: {type(output)}")
+    if hasattr(output, "logits"):
+        return getattr(output, "logits")
+    raise ValueError(f"Unsupported model output type for logits extraction: {type(output)}")
 
 
 def get_hook_fn(hook_point: HookPoint):
