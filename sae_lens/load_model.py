@@ -205,7 +205,9 @@ def _extract_logits_from_output(output: Any) -> torch.Tensor | None:
         return output["logits"]
     if hasattr(output, "logits"):
         return getattr(output, "logits")
-    raise ValueError(f"Unsupported model output type for logits extraction: {type(output)}")
+    raise ValueError(
+        f"Unsupported model output type for logits extraction: {type(output)}"
+    )
 
 
 def get_hook_fn(hook_point: HookPoint):
