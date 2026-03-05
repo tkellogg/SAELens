@@ -443,11 +443,17 @@ class SAETrainer(Generic[T_TRAINING_SAE, T_TRAINING_SAE_CONFIG]):
         update_interval: int = 100,
     ):
         if self.n_training_steps % update_interval == 0:
+            l0 = step_output.feature_acts.bool().float().sum(-1)
+            if l0.is_sparse:
+                l0 = l0.to_dense()
+            mean_l0 = l0.mean().item()
+            nonzero_frac = mean_l0 / step_output.feature_acts.shape[-1]
             loss_strs = " | ".join(
                 f"{loss_name}: {_unwrap_item(loss_value):.5f}"
                 for loss_name, loss_value in step_output.losses.items()
             )
-            pbar.set_description(f"{self.n_training_steps}| {loss_strs}")
+            pbar.set_description(
+                f\"{self.n_training_steps}| {loss_strs} | nonzero_frac: {nonzero_frac:.5f}\"\n+            )
             pbar.update(update_interval * self.cfg.train_batch_size_samples)
 
 
