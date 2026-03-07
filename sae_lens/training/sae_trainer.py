@@ -453,7 +453,8 @@ class SAETrainer(Generic[T_TRAINING_SAE, T_TRAINING_SAE_CONFIG]):
                 for loss_name, loss_value in step_output.losses.items()
             )
             pbar.set_description(
-                f\"{self.n_training_steps}| {loss_strs} | nonzero_frac: {nonzero_frac:.5f}\"\n+            )
+                f"{self.n_training_steps}| {loss_strs} | nonzero_frac: {nonzero_frac:.5f}"
+            )
             pbar.update(update_interval * self.cfg.train_batch_size_samples)
 
 
